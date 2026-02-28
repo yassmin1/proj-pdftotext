@@ -1,0 +1,14 @@
+version: 0.2
+phases:
+  install:
+    runtime-versions:
+      python: 3.11
+  build:
+    commands:
+      - aws cloudformation package --template-file pdftotxt.yaml --s3-bucket docsearch-artifact  --output-template-file lambdaoutput.yaml
+
+artifacts:
+  type: zip
+  files:
+    - pdftotxt.yaml
+    - lambdaoutput.yaml
