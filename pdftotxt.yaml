@@ -15,5 +15,4 @@ Resources:
       Environment:
         Variables:
           TARGET_BUCKET: docsearch-text
-      Layers:
-        - 'arn:aws:lambda:us-east-1:662670180517:layer:tika:1'
+      
